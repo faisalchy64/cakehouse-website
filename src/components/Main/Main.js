@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Cakes from "../Cakes/Cakes";
+import Cart from "../Cart/Cart";
 import "./Main.css";
 
 function Main() {
@@ -14,6 +15,7 @@ function Main() {
     return (
         <main>
             <Cakes cakes={cakes}></Cakes>
+            <Cart></Cart>
         </main>
     );
 }
