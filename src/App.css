@@ -1,0 +1,13 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.App {
+    color: #009578;
+}
+
+.App h1 {
+    margin: 1.5rem;
+}
