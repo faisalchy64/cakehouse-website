@@ -5,6 +5,7 @@ import "./Main.css";
 
 function Main() {
     const [cakes, setCakes] = useState([]);
+    const [cart, setCart] = useState([]);
 
     useEffect(() => {
         fetch("data.json")
@@ -12,10 +13,20 @@ function Main() {
             .then((data) => setCakes(data));
     }, []);
 
+    const addToCart = (id) => {
+        const item = cakes.find((cake) => cake.id == id);
+        setCart([...cart, item]);
+        // console.log(cart);
+    };
+
+    const handleDelete = (id) => {
+        console.log(id);
+    };
+
     return (
         <main>
-            <Cakes cakes={cakes}></Cakes>
-            <Cart></Cart>
+            <Cakes cakes={cakes} addToCart={addToCart}></Cakes>
+            <Cart cart={cart} handleDelete={handleDelete}></Cart>
         </main>
     );
 }

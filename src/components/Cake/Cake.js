@@ -1,6 +1,6 @@
 import "./Cake.css";
 
-function Cake({ cake }) {
+function Cake({ cake, addToCart }) {
     const { id, name, image, price } = cake;
     return (
         <div className="cake">
@@ -10,7 +10,7 @@ function Cake({ cake }) {
                 <h2>${price}</h2>
                 <button onClick={() => addToCart(id)}>
                     Add To Cart
-                    <span class="material-icons-outlined">
+                    <span className="material-icons-outlined">
                         add_shopping_cart
                     </span>
                 </button>
