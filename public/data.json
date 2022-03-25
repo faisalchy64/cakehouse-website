@@ -1,0 +1,62 @@
+[
+    {
+        "id": 1,
+        "name": "White Cake With Chocolate Syrup",
+        "image": "https://tinyurl.com/mr22529k",
+        "price": 35
+    },
+    {
+        "id": 2,
+        "name": "Baked Cup Cake With Strawberry",
+        "image": "https://tinyurl.com/yckhxaac",
+        "price": 15
+    },
+    {
+        "id": 3,
+        "name": "Layered Cake",
+        "image": "https://tinyurl.com/zxvfjz75",
+        "price": 40
+    },
+    {
+        "id": 4,
+        "name": "Macaroon Cake",
+        "image": "https://tinyurl.com/4ap5hx7r",
+        "price": 30
+    },
+    {
+        "id": 5,
+        "name": "Chocolate Cake",
+        "image": "https://tinyurl.com/34zbacw5",
+        "price": 25
+    },
+    {
+        "id": 6,
+        "name": "Floral Cake",
+        "image": "https://tinyurl.com/2p8azuhu",
+        "price": 45
+    },
+    {
+        "id": 7,
+        "name": "Fondant Cake",
+        "image": "https://tinyurl.com/e6dstvv7",
+        "price": 50
+    },
+    {
+        "id": 8,
+        "name": "Pie With Cream",
+        "image": "https://tinyurl.com/3kmtnt6r",
+        "price": 45
+    },
+    {
+        "id": 9,
+        "name": "Unicorn Cake",
+        "image": "https://tinyurl.com/2p99a6ec",
+        "price": 40
+    },
+    {
+        "id": 10,
+        "name": "Chocolate Fondant Cake",
+        "image": "https://tinyurl.com/2yc3ykh8",
+        "price": 30
+    }
+]
