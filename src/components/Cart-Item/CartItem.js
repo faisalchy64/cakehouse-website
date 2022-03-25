@@ -1,7 +1,7 @@
 import "./CartItem.css";
 
 function CartItem({ item, handleDelete }) {
-    const { name, image, price } = item;
+    const { id, name, image } = item;
     return (
         <div className="cart-item">
             <div className="img-box">
@@ -9,8 +9,8 @@ function CartItem({ item, handleDelete }) {
             </div>
             <h6>{name}</h6>
             <span
-                onClick={() => handleDelete(item.id)}
-                className="material-icons-outlined"
+                onClick={() => handleDelete(id)}
+                className="material-icons-outlined icon"
             >
                 delete
             </span>

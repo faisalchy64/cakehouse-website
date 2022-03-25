@@ -1,7 +1,7 @@
 import CartItem from "../Cart-Item/CartItem";
 import "./Cart.css";
 
-function Cart({ cart, handleDelete }) {
+function Cart({ cart, random, handleDelete, handleClear, handleRandom }) {
     return (
         <div className="cart">
             <h1>Cart</h1>
@@ -12,6 +12,23 @@ function Cart({ cart, handleDelete }) {
                     handleDelete={handleDelete}
                 ></CartItem>
             ))}
+
+            <h3>Randomly Choose Item Here</h3>
+
+            {random ? (
+                <CartItem item={random} handleDelete={handleDelete}></CartItem>
+            ) : random !== "" ? (
+                <h3>Please Try Again!</h3>
+            ) : (
+                ""
+            )}
+
+            <button onClick={handleRandom} id="choose">
+                CHOOSE ONE FOR ME
+            </button>
+            <button onClick={handleClear} id="clear">
+                CLEAR ALL
+            </button>
         </div>
     );
 }

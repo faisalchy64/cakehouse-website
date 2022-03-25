@@ -4,3 +4,21 @@
     gap: 1.5rem;
     padding: 1.5rem 2.5rem;
 }
+
+@media only screen and (max-width: 1300px) {
+    .cakes {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+@media only screen and (max-width: 1250px) {
+    .cakes {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media only screen and (max-width: 630px) {
+    .cakes {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+}

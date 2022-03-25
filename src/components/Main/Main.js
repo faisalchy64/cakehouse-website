@@ -6,6 +6,7 @@ import "./Main.css";
 function Main() {
     const [cakes, setCakes] = useState([]);
     const [cart, setCart] = useState([]);
+    const [random, setRandom] = useState("");
 
     useEffect(() => {
         fetch("data.json")
@@ -14,19 +15,47 @@ function Main() {
     }, []);
 
     const addToCart = (id) => {
-        const item = cakes.find((cake) => cake.id == id);
+        const item = cakes.find((cake) => cake.id === id);
+        if (cart.find((duplicate) => duplicate.id === id)) {
+            return;
+        }
+
         setCart([...cart, item]);
-        // console.log(cart);
     };
 
     const handleDelete = (id) => {
-        console.log(id);
+        const items = cart.filter((item) => item.id !== id);
+        setCart(items);
+    };
+
+    const handleRandom = () => {
+        const number = Math.abs(Math.round(Math.random() * cart.length));
+        console.log(number);
+        if (number < 0) {
+            return;
+        }
+
+        const randomItem = cart.find((item) => item.id === number);
+        console.log(randomItem);
+
+        setRandom(randomItem);
+    };
+
+    const handleClear = () => {
+        setCart([]);
+        setRandom("");
     };
 
     return (
         <main>
             <Cakes cakes={cakes} addToCart={addToCart}></Cakes>
-            <Cart cart={cart} handleDelete={handleDelete}></Cart>
+            <Cart
+                cart={cart}
+                random={random}
+                handleDelete={handleDelete}
+                handleClear={handleClear}
+                handleRandom={handleRandom}
+            ></Cart>
         </main>
     );
 }
