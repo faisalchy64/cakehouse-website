@@ -1,6 +1,6 @@
 # CakeHouse
 
-Live Site: [CakeHouse](https://github.com/facebook/create-react-app).
+Live Site: [CakeHouse](https://github.com/facebook/create-react-app)
 
 ## Available Scripts
 
