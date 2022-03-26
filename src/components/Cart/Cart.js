@@ -16,7 +16,13 @@ function Cart({ cart, random, handleDelete, handleClear, handleRandom }) {
             <h3>Randomly Choose Item Here</h3>
 
             {random ? (
-                <CartItem item={random} handleDelete={handleDelete}></CartItem>
+                <div>
+                    <h3>Perfect Match For You</h3>
+                    <CartItem
+                        item={random}
+                        handleDelete={handleDelete}
+                    ></CartItem>
+                </div>
             ) : (
                 ""
             )}
