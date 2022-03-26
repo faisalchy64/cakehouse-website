@@ -29,14 +29,8 @@ function Main() {
     };
 
     const handleRandom = () => {
-        const number = Math.abs(Math.round(Math.random() * cart.length));
-        console.log(number);
-        if (number < 0) {
-            return;
-        }
-
-        const randomItem = cart.find((item) => item.id === number);
-        console.log(randomItem);
+        const number = Math.abs(Math.round(Math.random() * cart.length - 1));
+        const randomItem = cart[number];
 
         setRandom(randomItem);
     };

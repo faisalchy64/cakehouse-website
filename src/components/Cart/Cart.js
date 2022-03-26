@@ -17,8 +17,6 @@ function Cart({ cart, random, handleDelete, handleClear, handleRandom }) {
 
             {random ? (
                 <CartItem item={random} handleDelete={handleDelete}></CartItem>
-            ) : random !== "" ? (
-                <h3>Please Try Again!</h3>
             ) : (
                 ""
             )}
